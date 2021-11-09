@@ -67,4 +67,50 @@ public class StringResponse {
     public void addSpecialCharacter() {
         this.specialCharacters++;
     }
+
+    public String toText() {
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append("parameter: ");
+        stringBuilder.append(parameter);
+        stringBuilder.append("\n");
+        stringBuilder.append("digits: ");
+        stringBuilder.append(digits);
+        stringBuilder.append("\n");
+        stringBuilder.append("upperCase: ");
+        stringBuilder.append(upperCase);
+        stringBuilder.append("\n");
+        stringBuilder.append("lowerCase: ");
+        stringBuilder.append(lowerCase);
+        stringBuilder.append("\n");
+        stringBuilder.append("whitespace: ");
+        stringBuilder.append(whitespace);
+        stringBuilder.append("\n");
+        stringBuilder.append("specialCharacters: ");
+        stringBuilder.append(specialCharacters);
+        stringBuilder.append("\n");
+        return stringBuilder.toString();
+    }
+
+    public String toCSV() {
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append("parameter,");
+        stringBuilder.append("digits,");
+        stringBuilder.append("upperCase,");
+        stringBuilder.append("lowerCase,");
+        stringBuilder.append("whitespace,");
+        stringBuilder.append("specialCharacters");
+        stringBuilder.append("\n");
+        stringBuilder.append(parameter);
+        stringBuilder.append(",");
+        stringBuilder.append(digits);
+        stringBuilder.append(",");
+        stringBuilder.append(upperCase);
+        stringBuilder.append(",");
+        stringBuilder.append(lowerCase);
+        stringBuilder.append(",");
+        stringBuilder.append(whitespace);
+        stringBuilder.append(",");
+        stringBuilder.append(specialCharacters);
+        return stringBuilder.toString();
+    }
 }
